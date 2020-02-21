@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestill Billet!</title>
+    <style>
+
+    button{
+        border-radius: 10px;
+    }
+    #feilAntall,#feilEpost,#feilEtternavn,#feilFilm,#feilFornavn,#feilTlf{
+        color: red;
+    }
+    </style>
+    <script src="js.js"></script>
+</head>
+<body>
+
+
+<h1>Bestilling av kinobiletter</h1>
+
+<table>
+    <tr>
+        <td>Velg film:</td>
+        <td>
+            <select id="filmer"> <!-- Bruk switch her -->
+                <option>Velg film her</option>
+                <option>Lord of the Rings</option>
+                <option>Biler</option>
+                <option>Wizard of Oz</option>
+                <option>Avengers</option>
+            </select>
+        </td>
+        <td><div id="feilFilm"></div></td>
+    </tr>
+</table>
+
+<br><br>
+<table>
+    <tr>
+        <td>
+          <p>Antall</p>
+        </td>
+        <td>
+            <input type="text" id="antall" size="1" maxlength="2"/>
+        </td>
+        <td>
+            <div id="feilAntall"></div><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Fornavn
+        </td>
+        <td>
+            <input type="text" id="fornavn"/>
+        </td>
+        <td>
+            <div id="feilFornavn"></div><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Etternavn
+        </td>
+        <td>
+            <input type="text" id="etternavn"/>
+        </td>
+        <td>
+            <div id="feilEtternavn"></div><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Telefonnr
+        </td>
+        <td>
+            <input type="text" id="tlf" maxlength="8"/>
+        </td>
+        <td>
+            <div id="feilTlf"></div><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Epost
+        </td>
+        <td>
+            <input type="text" id="epost"/>
+        </td>
+        <td>
+            <div id="feilEpost"></div><br>
+        </td>
+    </tr>
+</table>
+<button onclick="kjop()">Kjøp billet</button><br><br>
+
+<h2>Alle billetter</h2><br>
+<div id="utskrift"></div><br>
+
+<button onclick="slett()">Slett alle billettene</button>
+
+</body>
+</html>
